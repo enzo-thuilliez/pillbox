@@ -1,0 +1,35 @@
+# JS / TS
+node_modules/
+dist/
+.vite/
+coverage/
+*.tsbuildinfo
+.wrangler/
+.dev.vars
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Env & secrets
+.env*
+!.env.example
+*.pem
+
+# Real pharmacy data must never be committed (ADR-008).
+# Keep any local export here; it is ignored on purpose.
+private/
+*.real.json
+*.xlsx
+!**/fixtures/**/*.xlsx
+
+# Eval outputs
+evals/results/
+
+# OS / editors
+.DS_Store
+*.log

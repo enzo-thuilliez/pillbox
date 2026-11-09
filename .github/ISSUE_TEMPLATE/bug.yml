@@ -1,0 +1,38 @@
+name: Bug
+description: Something behaves differently from the contract or the docs
+title: "fix(scope): "
+labels: ["type:fix"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Never paste real staff names, the pharmacy's name or real schedules** (ADR-008). Use IDs like E3."
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happens
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen
+      description: Cite AGENTS.md or an ADR if they say so.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: "1. "
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      render: shell
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Browser, OS, deployment (preview / prod), commit SHA"

@@ -48,10 +48,16 @@ docs/             architecture, privacy, runbooks
 
 ## Conventions
 
-- **Never commit or push to `main`.** Branch `feat/…`, `fix/…`, `chore/…`, `docs/…`; open a
-  PR; CI must pass; squash merge.
+- **Never commit or push to `main`.** One issue → one branch named
+  `<type>/<issue>-<short-slug>` (e.g. `feat/5-port-solver`; `<type>` one of `feat`, `fix`,
+  `chore`, `docs`, `refactor`, `test`, `perf`, `ci`) → one PR → CI green (`ci-pass`, PR title,
+  gitleaks) → squash merge by the maintainer. Once CI is green, stop: never merge.
+- **Issues** carry one `type:*`, one or more `area:*`, one `priority:p0|p1|p2` label and the
+  milestone of their roadmap step. A change with no issue gets one first.
+- **Docs-only changes** go in their own PR, never mixed into a code PR.
 - **Conventional commits**: `feat(solver): add balanced-hours objective`. Scopes: `web`, `api`,
-  `schema`, `solver`, `evals`, `docs`, `ci`, `deps`, `repo`.
+  `schema`, `solver`, `evals`, `docs`, `ci`, `deps`, `repo`. Checked locally by the
+  commit-msg hook (`pre-commit install`) and on the PR title in CI.
 - TypeScript strict, ESM only. Python 3.12, typed, `ruff` + `mypy` clean.
 - New architectural choice → new ADR in DECISIONS.md, in the same PR.
 
@@ -62,3 +68,13 @@ docs/             architecture, privacy, runbooks
 - **Branch**: one issue, one branch, one PR.
 - **PR body**: first line `Closes #N` (or `Part of #N`), then What, Why, How to check.
 - **Before opening a PR**: run lint, typecheck and tests for every package you touched.
+- **GitHub**: use `gh` (or `gh api` for REST) for issues and PRs. Releases are off until #17.
+
+## Code intelligence
+
+There is no code to index yet. Once the monorepo scaffold (#3) lands, index the repo with
+**GitNexus** (code-heavy; the docs are small and live next to the code):
+
+- Refresh: `gitnexus analyze` at the repo root (the hooks also reindex after commits).
+- Before changing a schema in `packages/schema`, an API contract or a solver input/output
+  model, run GitNexus impact analysis and list the affected callers in the PR.

@@ -20,7 +20,18 @@
       "Bash(git push -u origin fix/*)",
       "Bash(git push -u origin chore/*)",
       "Bash(git push -u origin docs/*)",
-      "Bash(gh pr create:*)"
+      "Bash(gh pr create:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
+      "Bash(git push -u origin refactor/*)",
+      "Bash(git push -u origin test/*)",
+      "Bash(git push -u origin perf/*)",
+      "Bash(git push -u origin ci/*)",
+      "Bash(pre-commit run:*)",
+      "Bash(gh issue create:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr checks:*)",
+      "Bash(scripts/denylist-check.sh:*)"
     ],
     "deny": [
       "Bash(rm -rf:*)",
@@ -31,6 +42,7 @@
       "Bash(git push *+*)",
       "Bash(git push * main)",
       "Bash(git push *:main*)",
+      "Bash(gh pr merge:*)",
       "Read(private/**)"
     ]
   }

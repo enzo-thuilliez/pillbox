@@ -33,3 +33,9 @@ evals/results/
 # OS / editors
 .DS_Store
 *.log
+
+# Local agent artifacts (regenerated, never committed)
+.gitnexus/
+graphify-out/
+floorplan/
+CLAUDE.local.md

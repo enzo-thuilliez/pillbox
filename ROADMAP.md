@@ -6,7 +6,7 @@ line is an issue carrying the scope and acceptance criteria.
 ## M0 — Foundations ([milestone](https://github.com/enzo-thuilliez/pillbox/milestone/1))
 
 - [x] Repo docs and rules: AGENTS.md, DECISIONS.md, CLAUDE.md
-- [x] Repo tooling: issue and PR templates, labels, PR-title lint, gitleaks, denylist check,
+- [x] Repo tooling: issue and PR templates, labels, PR-title lint, gitleaks,
       git hooks with the conventional commit-msg check, Dependabot (#1)
 - [x] Docs aligned with my other repos: README, ROADMAP links (#2)
 - [ ] Monorepo scaffold: npm workspaces, uv, lint, format, typecheck, test runners (#3)

@@ -4,7 +4,7 @@
 
 - `.claude/settings.json` allows the npm/uv commands, local git, `git push -u origin` for
   `feat/`, `fix/`, `chore/`, `docs/`, `refactor/`, `test/`, `perf/` and `ci/` branches,
-  `gh issue create`, `gh pr create`, reading PR checks and the denylist check. Pushes to `main`,
+  `gh issue create`, `gh pr create`, reading PR checks. Pushes to `main`,
   force pushes, `gh pr merge`, `rm -rf` and reading `private/` are denied.
 - Project allow rules only load once the workspace is trusted: run `claude` interactively in
   the repo and accept the trust dialog.

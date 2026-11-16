@@ -78,9 +78,9 @@ ones, supersede them instead.
 - **Context:** The repo is public. The prototype's history contains real names and the
   pharmacy's identity, so it is not reused.
 - **Decision:** Fresh history. Fixtures and the golden test use fictitious names. CI runs
-  gitleaks and a denylist check (real names, pharmacy name) whose list is stored as a GitHub
-  secret, not in the repo.
-- **Consequences:** The denylist must be kept up to date when staff changes.
+  gitleaks. A custom denylist check (real names, pharmacy name) was dropped on 2026-11-16: it
+  needed a secret that Dependabot PRs cannot read, so they always failed.
+- **Consequences:** Keeping real data out relies on review and on gitleaks.
 
 ## ADR-009: Free tiers only
 

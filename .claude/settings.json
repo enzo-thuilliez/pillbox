@@ -30,8 +30,7 @@
       "Bash(pre-commit run:*)",
       "Bash(gh issue create:*)",
       "Bash(gh pr view:*)",
-      "Bash(gh pr checks:*)",
-      "Bash(scripts/denylist-check.sh:*)"
+      "Bash(gh pr checks:*)"
     ],
     "deny": [
       "Bash(rm -rf:*)",

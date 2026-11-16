@@ -10,7 +10,7 @@ The flow is the same for humans and coding agents; [AGENTS.md](AGENTS.md) has th
    `type(scope): lowercase summary`, e.g. `feat(solver): add balanced-hours objective`.
    `pre-commit install` adds the hooks, including the commit-message check.
 4. **Never use real data** (ADR-008): fictitious names only, everywhere, including commit
-   messages and screenshots. CI fails on denylisted terms.
+   messages and screenshots.
 5. **Open a pull request** with `Closes #N` and the template filled. The PR title must be a
    Conventional Commit: PRs are squash-merged and the title becomes the commit on `main`.
 6. The maintainer reviews and merges.

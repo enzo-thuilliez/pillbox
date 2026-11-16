@@ -17,7 +17,7 @@
   description: "Copilot extraction and explanations"
 - name: "area:privacy"
   color: "0e8a16"
-  description: "Pseudonymization, denylist, real-data protection"
+  description: "Pseudonymization, real-data protection"
 - name: "area:schema"
   color: "0e8a16"
   description: "Shared Zod schemas (packages/schema)"
